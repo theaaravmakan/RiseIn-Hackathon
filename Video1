@@ -1,0 +1,43 @@
+fn main() {
+    let x: i32 = 16;
+    println!("{}", x);
+    
+    let z: String = String::from("Hello, Soroban!"); //Mutable
+    let y: &str = "Hello, Stellar!"; //Immutable
+    
+    println!("{y}");
+    println!("{z}");
+    
+    //Functions - Public and Private
+    
+    // pub fn event(name: String){
+    //     let name: String = String::from("James");
+    //     println!("{}", name);
+    // }
+    
+    
+    let e: EventForKids = EventForKids{
+        name: String::from("KidsCo"),
+        date: String::from("04.03.2024"),
+        number_of_participants: 1000,
+        place: String::from("NY, USA")
+    };
+}
+
+//Structs -> Compiling many items in one class
+
+struct EventForKids{
+    name: String,
+    date: String,
+    number_of_participants: u32,
+    place: String
+}
+
+
+//enums -> This can compiler errors in one class!
+
+enum ErrorsForEvent {
+    NoEvent,
+    CancelledEvent,
+    EventType
+}
